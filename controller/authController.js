@@ -12,11 +12,10 @@ router.use(bodyParser.json());
 
 ///get all users
 router.get('/users',(req,res) => {
-    res.send('JioMart API running')
-    // User.find({},(err,data) => {
-    //     if(err) throw err;
-    //     res.send(data)
-    // })
+    User.find({},(err,data) => {
+        if(err) throw err;
+        res.send(data)
+    })
 })
 
 //register User
